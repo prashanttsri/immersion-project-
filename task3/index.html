@@ -6,13 +6,31 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <div class="container">
     <h1>🛍️ PRODUCT CATALOG</h1>
 
     <div class="search-bar">
       <input type="text" id="searchInput" placeholder="Search products by name..." />
       <button onclick="searchProduct()">Search</button>
+    </div>
+
+    <div class="controls">
+      <label for="sort">Sort By:</label>
+      <select id="sort" onchange="sortProducts()">
+        <option value="default">Default</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="rating-desc">Rating: High to Low</option>
+      </select>
+
+      <label for="brandFilter">Filter by Brand:</label>
+      <select id="brandFilter" onchange="filterProducts()">
+        <option value="all">All Brands</option>
+      </select>
+
+      <label for="priceRange">Max Price:</label>
+      <input type="range" id="priceRange" min="0" max="2000" step="10" value="2000" oninput="filterProducts()">
+      <span id="priceValue">2000</span>
     </div>
 
     <div id="productList" class="product-grid"></div>

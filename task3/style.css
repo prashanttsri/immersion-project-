@@ -22,7 +22,7 @@ h1 {
 .search-bar {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 input[type="text"] {
@@ -48,6 +48,32 @@ button:hover {
   background-color: #0056b3;
 }
 
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.controls label {
+  font-weight: bold;
+}
+
+.controls select,
+.controls input[type="range"] {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#priceValue {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -64,7 +90,7 @@ button:hover {
 }
 
 .product-card:hover {
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .product-card img {
